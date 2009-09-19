@@ -1,0 +1,14 @@
+<h1><%= plural_name.titleize %></h1>
+
+<p><%%= link_to "Add a new <%= singular_name.titleize %>", new_<%= singular_name %>_path %></p>
+
+<ul id="<%= singular_name %>_links">
+  <%% @<%= plural_name %>.each do |<%= singular_name %>| %>
+    <li>
+      <%%= link_to <%= singular_name %>.<%= attributes.first.name %>, <%= singular_name %>_path(<%= singular_name %>) %>
+      <%%= link_to '(edit)', edit_<%= singular_name %>_path(<%= singular_name %>), :class => 'edit' %>
+      <%%= link_to '(delete)', <%= singular_name %>_path(<%= singular_name %>), :class => 'delete', :confirm => 'Are you sure?', :method => :delete %>
+    </li>
+  <%% end %>
+</ul>
+

@@ -1,0 +1,29 @@
+Shoku
+=====
+
+Shoku is (or will be) a set of tools if you're using Shoulda and Cucumber.
+
+The first of these tools is a scaffold generator that creates the factory, shoulda
+tests for the controller, and cucumber features.
+
+...at the moment, it only has the shoulda and factory stuff.  Cucumber features
+coming soon.
+
+
+Requirements
+============
+
+thoughtbot-shoulda
+thoughtbot-factory_girl
+jferris-mocha
+webrat
+cucumber
+
+
+Example
+=======
+
+script/generate shoku_scaffold Model name:string
+
+
+Copyright (c) 2009 Jaime Bellmyer, released under the MIT license
